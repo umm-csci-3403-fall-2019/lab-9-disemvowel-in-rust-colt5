@@ -6,6 +6,24 @@ fn main() {
     println!("s was '{}', and without vowels is '{}'.", s, s_disemvowel);
 }
 
+fn disemvowel(x:&str) -> std::string::String {
+    let mut string = x.chars().peekable();
+    let mut new_string = String::new();
+        while let Some(m) = string.next(){
+        match m {
+            'a'|'e'|'i'|'o'|'u'|'A'|'E'|'I'|'O'|'U' => {
+                string.peek();
+                }
+            _ =>{
+                 string.peek();
+                 new_string.push(m);
+                 }
+
+                }
+        }
+   new_string
+}
+
 // Everything from here down is Rust test code. You shouldn't need to 
 // change any of this. 
 //
