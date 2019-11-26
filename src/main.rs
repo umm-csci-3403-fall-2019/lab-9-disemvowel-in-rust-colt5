@@ -11,13 +11,14 @@ fn disemvowel(x:&str) -> std::string::String {
     let mut new_string = String::new();
         while let Some(m) = string.next(){
         match m {
-            'a'|'e'|'i'|'o'|'u'|'A'|'E'|'I'|'O'|'U' => {
+            'a'|'e'|'i'|'o'|'u'|'A'|'E'|'I'|'O'|'U' 
+                  => {
                 string.peek();
-                }
-            _ =>{
-                 string.peek();
-                 new_string.push(m);
-                 }
+                     }
+                _ => {
+                string.peek();
+                new_string.push(m);
+                     }
 
                 }
         }
